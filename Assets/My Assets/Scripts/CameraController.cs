@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour {
 		manualRotation.x = magicStartTilt;
 	}
 	
-	void Update() {
+	void LateUpdate() {
 		rotateCamera();
 		moveCamera();
 	}
