@@ -19,7 +19,7 @@ public class ObjectController : MonoBehaviour {
 	
 	public string playerNearbyMessage;
 	
-	public void Start () {
+	public virtual void Start () {
 		message = message.Replace("\\\\n", "\n");
 		playerNearbyMessage = playerNearbyMessage.Replace("\\\\n", "\n");
 
@@ -33,13 +33,13 @@ public class ObjectController : MonoBehaviour {
 	}
 	
 	// Instantiate the sign that goes above our head
-	public void createTextObj() {
+	void createTextObj() {
 		textObj = Instantiate(Resources.Load ("Sign", typeof(GameObject))) as GameObject;
 		textObj.GetComponent<TextMesh>().fontSize = 100 * (int) (transform.localScale.y * ((BoxCollider) GetComponent<Collider>()).size.y);
 	}
 	
 	// Lock the physics of non-player objects so they can't be pushed around
-	public void handleLocking() {
+	public virtual void handleLocking() {
 		if (gameObject.tag == "Player") {
 			GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
 			GetComponent<Rigidbody> ().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
@@ -50,7 +50,7 @@ public class ObjectController : MonoBehaviour {
 	}
 	
 	// Update
-	public void Update() {
+	public virtual void Update() {
 		if (displayingText) { 
 			float sX = transform.localScale.x * ((BoxCollider) GetComponent<Collider>()).size.x;
 			float xP = transform.position.x - sX / 2 + sX * messagePosition.x;

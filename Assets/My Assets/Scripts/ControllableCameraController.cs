@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ControllableCameraController : PlayerController {	
-	new void Start() {
+	public override void Start() {
 		base.Start ();
 
 		actionable = true;
@@ -15,21 +15,21 @@ public class ControllableCameraController : PlayerController {
 	}
 	
 	// Update
-	new void Update () {
+	public override void Update () {
 		if (gameObject.tag == "Player") {
 			scanAndInteract(); // We can still interact with other objects
 			transform.rotation = Quaternion.Euler(new Vector3(0, Camera.main.transform.rotation.eulerAngles.y + 90, 0)); // poin t in the direction we're looking
 		} else { 
-			GetComponent<ObjectController>().Update();
+			base.Update();
 		}
 	}
 
 	// Override PlayerController FixedUpdate, because we don't want our cameras to be doing that
-	new void FixedUpdate() {
+	public override void FixedUpdate() {
 
 	}
 	
-	new void handleLocking() {
+	public override void handleLocking() {
 		// Cameras can't be moved
 		GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
 		GetComponent<Rigidbody>().freezeRotation = true;
@@ -37,20 +37,24 @@ public class ControllableCameraController : PlayerController {
 	}
 	
 	// Special functions for switching to and becoming the new player because the camera selectively hides it's model
-	new public void swapWithObject(GameObject obj) {
+	public override void swapWithObject(GameObject obj) {
 		foreach (Renderer r in GetComponentsInChildren<Renderer>()) {
 			r.enabled = true;
 		}
 		
 		base.swapWithObject(obj);
 	}
-	
-	new public void becomePlayer() {
-		base.becomePlayer();
 
+	public override Vector3 lookAfterSwap(GameObject previous) {
+		return previous.transform.position;
+	}
+	
+	public override void becomePlayer() {
 		foreach (Renderer r in GetComponentsInChildren<Renderer>()) {
 			r.enabled = false;
 		}
+
+		base.becomePlayer();
 	}
 }
 

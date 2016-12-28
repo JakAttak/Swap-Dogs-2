@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FPSController : ObjectController {
 
-	new void Start() {
+	public override void Start() {
 		base.Start();
 
 		setFontSize(400);
