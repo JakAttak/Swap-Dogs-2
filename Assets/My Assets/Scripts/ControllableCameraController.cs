@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ControllableCameraController : PlayerController {	
 	public override void Start() {
-		base.Start ();
+		base.Start();
 
 		actionable = true;
 		speed = 0f; // Cameras can't be moved
@@ -15,7 +15,7 @@ public class ControllableCameraController : PlayerController {
 	}
 	
 	// Update
-	public override void Update () {
+	public override void Update() {
 		if (gameObject.tag == "Player") {
 			scanAndInteract(); // We can still interact with other objects
 			transform.rotation = Quaternion.Euler(new Vector3(0, Camera.main.transform.rotation.eulerAngles.y + 90, 0)); // poin t in the direction we're looking

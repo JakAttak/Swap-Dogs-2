@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObjectController : MonoBehaviour {
+public class ObjectController : HelperFunctions {
 	
 	// Variables that our objects need
 	public string message;
@@ -19,7 +19,7 @@ public class ObjectController : MonoBehaviour {
 	
 	public string playerNearbyMessage;
 	
-	public virtual void Start () {
+	public virtual void Start() {
 		message = message.Replace("\\\\n", "\n");
 		playerNearbyMessage = playerNearbyMessage.Replace("\\\\n", "\n");
 
@@ -34,7 +34,7 @@ public class ObjectController : MonoBehaviour {
 	
 	// Instantiate the sign that goes above our head
 	void createTextObj() {
-		textObj = Instantiate(Resources.Load ("Sign", typeof(GameObject))) as GameObject;
+		textObj = Instantiate(Resources.Load("Sign", typeof(GameObject))) as GameObject;
 		textObj.GetComponent<TextMesh>().fontSize = 100 * (int) (transform.localScale.y * ((BoxCollider) GetComponent<Collider>()).size.y);
 	}
 	

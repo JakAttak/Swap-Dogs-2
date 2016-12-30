@@ -2830,6 +2830,15 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3d53538a637bcf2418122a4a873ab6a5, type: 2}
+    - target: {fileID: 142770, guid: eb3312b7268494b418e7f0ec16c0da5d, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166042515464182, guid: eb3312b7268494b418e7f0ec16c0da5d,
+        type: 2}
+      propertyPath: movementFollowsCamera
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb3312b7268494b418e7f0ec16c0da5d, type: 2}
   m_IsPrefabParent: 0
@@ -2860,7 +2869,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 174.84651
+      value: 174.84647
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2868,23 +2877,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.31146
+      value: 5.3114595
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.99939084
+      value: -0.999884
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.03489959
+      value: 0.015232201
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_RootOrder
@@ -2892,7 +2901,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -176
+      value: -178.25401
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalScale.x
@@ -2908,6 +2917,136 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424040, guid: 51df82b7969fc6048b087a83e704fe51, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64645496344457538, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64784738887930718, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64942094921883512, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64497836209840362, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64102454681723170, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64161298266500014, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64119778041285420, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64949652722900270, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64912803726868140, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64305445872156120, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64949448822360114, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64507194727715694, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64660378326151878, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64645496344457538, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64784738887930718, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64942094921883512, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64497836209840362, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64102454681723170, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64161298266500014, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64119778041285420, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64949652722900270, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64912803726868140, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64305445872156120, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64660378326151878, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64949448822360114, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64507194727715694, guid: 51df82b7969fc6048b087a83e704fe51,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3059,7 +3198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 981235799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ef52a0086cc4435a3c11c2e8dcc4b9, type: 3}
+  m_Script: {fileID: 11500000, guid: cfd418a36e8351243ab536b1d0071de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   message: You can take control of cars too!
@@ -3068,10 +3207,10 @@ MonoBehaviour:
   actionable: 0
   nearPlayer: 0
   playerNearbyMessage: 
-  speed: 50
+  speed: 75
   cameraDistance: {x: 0, y: 16, z: -4}
   cameraMaxTilt: {x: -90, y: 20}
-  modelRotationOffset: {x: 0, y: 90, z: 0}
+  modelRotationOffset: {x: 0, y: -90, z: 0}
   objectsInArea: []
   closestObj: {fileID: 0}
 --- !u!54 &981235802
@@ -6293,6 +6432,10 @@ Prefab:
     - target: {fileID: 9591708, guid: 10c7ca40ff7ecec459b4dbb577e2bf4c, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163954, guid: 10c7ca40ff7ecec459b4dbb577e2bf4c, type: 2}
+      propertyPath: m_TagString
+      value: PlayerChoice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c7ca40ff7ecec459b4dbb577e2bf4c, type: 2}

@@ -11,7 +11,7 @@ public class FPSController : ObjectController {
 		colorText(Color.red);
 	}
 
-	void LateUpdate () {
+	void LateUpdate() {
 		displayText("FPS: " + (int) (1.0f / Time.deltaTime));
 		transform.position = GameObject.FindGameObjectWithTag("Player").transform.position + new Vector3(0.0f, 4.0f, 0.0f);
 	}

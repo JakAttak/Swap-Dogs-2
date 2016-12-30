@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : HelperFunctions {
 	private ObjectController[] objects;
 
-	void Start () {
+	void Start() {
 		objects = getInteractableObjects();
 	}
 
