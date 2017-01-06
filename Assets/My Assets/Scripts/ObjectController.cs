@@ -24,14 +24,24 @@ public class ObjectController : HelperFunctions {
 		playerNearbyMessage = playerNearbyMessage.Replace("\\\\n", "\n");
 
 		if (playerNearbyMessage == "") {
-			playerNearbyMessage = "I am a " + gameObject.tag;
+			setNearbyMessage(defaultNearbyMessage());
 		}
 		
 		createTextObj();
 		
 		handleLocking();
 	}
-	
+
+	// Returns what the default message should be if one isnt already set
+	public virtual string defaultNearbyMessage() {
+		return "I am a " + gameObject.tag;
+	}
+
+	// Updates the object's nearby message
+	public void setNearbyMessage(string message) {
+		playerNearbyMessage = message;
+	}
+
 	// Instantiate the sign that goes above our head
 	void createTextObj() {
 		textObj = Instantiate(Resources.Load("Sign", typeof(GameObject))) as GameObject;
@@ -52,12 +62,17 @@ public class ObjectController : HelperFunctions {
 	// Update
 	public virtual void Update() {
 		if (displayingText) { 
-			float sX = transform.localScale.x * ((BoxCollider) GetComponent<Collider>()).size.x;
-			float xP = transform.position.x - sX / 2 + sX * messagePosition.x;
-			float sY = transform.localScale.y * ((BoxCollider) GetComponent<Collider>()).size.y;
-			float yP = transform.position.y - sY / 2 + sY * messagePosition.y;
-			float sZ = transform.localScale.z * ((BoxCollider) GetComponent<Collider>()).size.z;
-			float zP = transform.position.z - sZ / 2 + sZ * messagePosition.z;
+			Vector3 sV = new Vector3(0f, 0f, 0f);
+			sV.x = transform.localScale.x * ((BoxCollider) GetComponent<Collider>()).size.x;
+			sV.y = transform.localScale.y * ((BoxCollider) GetComponent<Collider>()).size.y;
+			sV.z = transform.localScale.z * ((BoxCollider) GetComponent<Collider>()).size.z;
+
+			sV = transform.rotation * sV;
+
+			float xP = transform.position.x - sV.x / 2 + sV.x * messagePosition.x;
+			float yP = transform.position.y - sV.y / 2 + sV.y * messagePosition.y;
+			float zP = transform.position.z - sV.z / 2 + sV.z * messagePosition.z;
+
 			textObj.transform.position = new Vector3(xP, yP + textObj.GetComponent<TextMesh>().GetComponent<Renderer>().bounds.size.y / 2, zP);
 			textObj.transform.LookAt(textObj.transform.position + Camera.main.GetComponent<CameraController>().lookOffset()); // rotate text to face the camera
 		}
@@ -66,6 +81,11 @@ public class ObjectController : HelperFunctions {
 	// Helper function that checks if you are in range of a player
 	public void setNearPlayer(bool near) {
 		nearPlayer = near;
+	}
+
+	// Handles interactions (default is no interactions)
+	public virtual void handleInteractions(GameObject cause) {
+
 	}
 	
 	// Displays message above head when player is nearby.  
@@ -98,10 +118,10 @@ public class ObjectController : HelperFunctions {
 		textObj.GetComponent<TextMesh>().fontSize = fs;
 	}
 
-	// Some objects will have a message they can display to you
+	// Some objects will have a message they can display to you when prompted (like players)
 	public void speak() {
 		if (message != "") {
-			displayText (message);
+			displayText(message);
 		}
 	}
 }
