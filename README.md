@@ -1,2 +1,2 @@
-# Swap-Dogs-2
-Computer Club
+# Swapsy
+Computer Club Entry

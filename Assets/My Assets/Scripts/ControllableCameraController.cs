@@ -11,8 +11,13 @@ public class ControllableCameraController : PlayerController {
 		cameraDistance = Vector3.zero; // the camera goes right on this object so that it sees from it's viewpoint
 		cameraMaxTilt = new Vector2(-75f, 45f); // The camera can be rotated more than a normal player
 		interactionRange = Mathf.Max(interactionRange, 30f); // We can interact with these from very far away
-		playerNearbyMessage = "This is a camera\nUse it to expand your viewpoints\n(c) Take over";
 	}
+
+	// Returns what the default message should be if one isnt already set (overrides camera setting)
+	public override string defaultNearbyMessage() {
+		return "This is a camera\nUse it to expand your viewpoints\n(c) Take over";
+	}
+
 	
 	// Update
 	public override void Update() {
