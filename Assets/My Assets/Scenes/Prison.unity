@@ -878,6 +878,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 317950206}
+  - component: {fileID: 317950207}
   m_Layer: 0
   m_Name: Courtyard
   m_TagString: Untagged
@@ -901,6 +902,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &317950207
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317950205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!1001 &344919721
 Prefab:
   m_ObjectHideFlags: 0
@@ -963,6 +978,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 351278826}
+  - component: {fileID: 351278827}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -986,6 +1002,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &351278827
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 351278825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!1001 &361752850
 Prefab:
   m_ObjectHideFlags: 0
@@ -1320,6 +1350,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 525815721}
+  - component: {fileID: 525815722}
   m_Layer: 0
   m_Name: Vehicles
   m_TagString: Untagged
@@ -1341,6 +1372,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &525815722
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 525815720}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!1 &533513661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,6 +1394,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 533513662}
+  - component: {fileID: 533513663}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -1372,6 +1418,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &533513663
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533513661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!1001 &534921013
 Prefab:
   m_ObjectHideFlags: 0
@@ -3231,6 +3291,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1620440189}
+  - component: {fileID: 1620440190}
   m_Layer: 0
   m_Name: Houses
   m_TagString: Untagged
@@ -3256,6 +3317,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1620440190
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1620440188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1642790838
 Prefab:
   m_ObjectHideFlags: 0
